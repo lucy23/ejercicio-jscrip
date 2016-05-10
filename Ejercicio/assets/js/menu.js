@@ -32,12 +32,12 @@ $(document).ready(function(){
   // no funciona.
 
 $(window).resize(function(){
-	if($(window).windth()>990)
+	if($(window).width()>990)
 	{
-		$('mobile-close').hide();
-		$('mobile-button').hide();
+		$('#mobile-close').hide();
+		$('#mobile-button').hide();
 	}else{
-		$('mobile-button').show();
+		$('#mobile-button').show();
 
 	}
 
@@ -53,14 +53,14 @@ $(window).resize(function(){
 
 // esto hace que las cosas se queden marcadas
 
-//
+$('.clearfix li').click(function(){
+   
+    if($(this).hasClass('current-menu-item')){
+    $(this).removeClass('current-menu-item');
+        }else{
+        $('.clearfix li').removeClass('current-menu-item');
+        $(this).addClass('current-menu-item');
+}
+});
 
-	// $('.clearfix li').click(function(){
-	    
-	//     if($(this).hasClass('current-menu-item')){
-	//     
-	//     }else{
-	//         $('.clearfix li').removeClass('current-menu-item');
-	//         
-	// });
 })
